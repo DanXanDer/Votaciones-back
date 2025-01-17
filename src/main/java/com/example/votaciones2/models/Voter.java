@@ -17,17 +17,11 @@ public class Voter {
     @Column(nullable = false, length = 100)
     private String name;
     @Column(nullable = false, length = 100)
-    private String lastname;
-    @Column(nullable = false, length = 100)
     private String role;
     @Column(nullable = false, length = 100)
     private String dni;
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(
-            name = "vote",
-            referencedColumnName = "idCandidateList",
-            foreignKey = @ForeignKey(name = "FK_CandidateList_Candidate")
-    )
-    private CandidateList vote;
+    @Column
+    private Integer idList;
+    @Column
+    private Boolean hasVoted;
 }

@@ -1,6 +1,6 @@
 package com.example.votaciones2.DTO.Request;
 
-public record AdminRequest(
+public record AdminLogin(
         String email,
         String password
 ) {

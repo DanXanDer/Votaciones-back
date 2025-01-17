@@ -1,9 +1,9 @@
 package com.example.votaciones2.DTO.Response;
 
-public record VoterResponse(
-        Integer idVoter,
+public record VoterResultResponse(
         String name,
-        String role,
+        String dni,
+        Integer idList,
         Boolean hasVoted
 ) {
 }

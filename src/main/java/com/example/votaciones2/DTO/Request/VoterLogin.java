@@ -1,6 +1,6 @@
 package com.example.votaciones2.DTO.Request;
 
-public record VoterRequest(
+public record VoterLogin(
         String dni,
         String code
 ) {

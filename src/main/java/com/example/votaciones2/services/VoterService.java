@@ -7,6 +7,8 @@ import com.example.votaciones2.repo.VoterRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class VoterService {
@@ -15,5 +17,17 @@ public class VoterService {
 
     public Voter getVoterByCredentials(String dni, String code){
         return voterRepo.getVoterByCredentials(dni, code).orElseThrow(() -> new ModelNotFoundException("DNI o código incorrecto"));
+    }
+
+    public Voter getVoterByIdVoter(Integer idVoter){
+        return voterRepo.getVoterByIdVoter(idVoter);
+    }
+
+    public List<Voter> getAllVoters(){
+        return voterRepo.getAllVoters();
+    }
+
+    public void saveVote(Voter voter){
+        voterRepo.save(voter);
     }
 }
